@@ -1,0 +1,156 @@
+/* Variables */
+:root {
+  --background: #f8eded;
+  --colorBluish: #0a81ab;
+  --colorLight: #fff5fd;
+  --colorError: #bb371a;
+
+  --radius: 0.5rem;
+
+  --transitionAll: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 65.16%;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container__title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Loading */
+.loader {
+  width: 100%;
+  height: 2rem;
+  margin: 2rem 0;
+  opacity: 0;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+/* Quiz Section */
+.quiz {
+  background-color: var(--colorLight);
+  width: 34rem;
+  padding: 1.5rem 4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0.8rem;
+  background-color: var(--colorBluish);
+  transition: var(--transitionAll);
+}
+
+.quiz__question {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.quiz__answer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quiz__answer input {
+  cursor: pointer;
+}
+
+.quiz__answer-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.quiz__button {
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.2rem;
+  background-color: var(--colorBluish);
+  color: var(--colorLight);
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: var(--transitionAll);
+}
+
+.quiz__button:active {
+  transform: scale(0.9);
+}
+
+/* Update */
+.update {
+  width: 32rem;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-style: italic;
+  opacity: 0;
+  transform: scale(0);
+  transition: var(--transitionAll);
+}
+
+/* Error */
+.error {
+  opacity: 1;
+  transform: scale(1);
+  background-color: var(--colorError);
+  color: var(--colorLight);
+}
+
+/* Success */
+.success {
+  opacity: 1;
+  transform: scale(1);
+  background-color: var(--colorLight);
+  color: #111;
+}
+
+/* Result */
+.result {
+  font-size: 1.8rem;
+  text-align: center;
+}

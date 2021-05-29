@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="container__title">Simple Quizes.</h1>
+
+      <div class="loader">
+        <img src="./loading.gif" alt="Loading" />
+      </div>
+
+      <section class="quiz">
+        <div class="progress__bar"></div>
+        <div class="wrapper">
+          <h3 class="quiz__question" id="question">How Old Are You?</h3>
+
+          <div class="quiz__answer">
+            <input type="radio" class="answer__radio" name="answer" id="a" />
+            <label class="quiz__answer-text" id="a__text">24</label>
+          </div>
+
+          <div class="quiz__answer">
+            <input type="radio" class="answer__radio" name="answer" id="b" />
+            <label class="quiz__answer-text" id="b__text">24</label>
+          </div>
+
+          <div class="quiz__answer">
+            <input type="radio" class="answer__radio" name="answer" id="c" />
+            <label class="quiz__answer-text" id="c__text">24</label>
+          </div>
+
+          <div class="quiz__answer">
+            <input type="radio" class="answer__radio" name="answer" id="d" />
+            <label class="quiz__answer-text" id="d__text">24</label>
+          </div>
+
+          <button class="quiz__button" id="submit">Next Quiz.</button>
+        </div>
+      </section>
+
+      <p class="update">This is for update after every submit</p>
+    </main>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+  </body>
+</html>
